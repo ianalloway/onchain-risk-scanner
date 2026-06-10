@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onchain-risk-scanner"
+version = "0.1.0"
+description = "Read-only risk and anomaly scanner for Ethereum and Base contracts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ian Alloway" }]
+keywords = ["ethereum", "base", "web3", "security", "smart-contracts", "bug-bounty"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+onchain-risk = "onchain_risk_scanner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
