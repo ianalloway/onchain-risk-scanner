@@ -181,6 +181,10 @@ No referral yet.
 
 The project is deliberately read-only and avoids exploit execution. Reports are framed as triage and education, not vulnerability disclosure. If selected, I would welcome ESP feedback on the most useful Glamsterdam signals to prioritize.
 
+Preferred on-chain recipient wallet, if needed for ETH grant payment setup:
+
+`0x6F278Ce76BA5ED31Fd9bE646D074863e126836E9`
+
 ### Allow contact from Ethereum Foundation about other opportunities?
 
 Yes

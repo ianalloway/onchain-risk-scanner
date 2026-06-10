@@ -53,6 +53,6 @@ USD 8,000-15,000 equivalent.
 
 ## Wallet
 
-`[PUBLIC DONATION / GRANT WALLET IF REQUIRED]`
+`0x6F278Ce76BA5ED31Fd9bE646D074863e126836E9`
 
 Do not paste a seed phrase or private key. Only use a public address.

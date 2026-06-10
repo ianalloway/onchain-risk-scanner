@@ -56,7 +56,7 @@ Word count: 116
 
 ### Please link a 1 minute demo of the project
 
-`[DEMO VIDEO URL REQUIRED]`
+https://raw.githubusercontent.com/ianalloway/onchain-risk-scanner/main/demo/base-builder-grants-demo.mp4
 
 Suggested demo outline:
 
