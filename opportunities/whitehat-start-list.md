@@ -28,6 +28,9 @@ Avoid first:
 - reports requiring real mainnet transactions,
 - programs with many duplicate historical findings.
 
+## Selected Programs
+See [selected-programs.md](selected-programs.md) for the list of selected white-hat bounty programs.
+
 ## Repeatable Workflow
 
 1. Read the scope twice.
