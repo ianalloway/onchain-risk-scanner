@@ -32,6 +32,12 @@ Scan a Base contract with the default public RPC:
 onchain-risk 0x4200000000000000000000000000000000000006 --chain base
 ```
 
+Run the grant/demo flow:
+
+```bash
+./scripts/demo.sh
+```
+
 Write a markdown report:
 
 ```bash
