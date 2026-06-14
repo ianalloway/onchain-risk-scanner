@@ -56,3 +56,27 @@ class JsonRpcClient:
 
     def get_storage_at(self, address: str, slot: str, block: str = "latest") -> str:
         return self.call("eth_getStorageAt", [address, slot, block])
+
+    def get_block_number(self) -> int:
+        raw = self.call("eth_blockNumber", [])
+        return int(raw, 16)
+
+    def get_logs(
+        self,
+        *,
+        address: str,
+        topics: list[str],
+        from_block: int,
+        to_block: int,
+    ) -> list[dict[str, object]]:
+        return self.call(
+            "eth_getLogs",
+            [
+                {
+                    "address": address,
+                    "fromBlock": hex(from_block),
+                    "toBlock": hex(to_block),
+                    "topics": [topics],
+                }
+            ],
+        )

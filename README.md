@@ -1,5 +1,8 @@
 # On-chain Risk Scanner
 
+[![test](https://github.com/ianalloway/onchain-risk-scanner/actions/workflows/test.yml/badge.svg)](https://github.com/ianalloway/onchain-risk-scanner/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Read-only anomaly and risk triage for Ethereum, Base, Optimism, and Arbitrum contracts.
 
 This project is built as public proof-of-work for Web3 security, grant applications, and white-hat research. It does not exploit contracts, send transactions, or require private keys. It fetches runtime bytecode and proxy storage through JSON-RPC, then produces a short report that points reviewers toward security-relevant follow-up questions.
@@ -18,10 +21,11 @@ The goal is not to replace audits. The goal is to turn “where should I look fi
 ## Install
 
 ```bash
-cd /Users/ianalloway/Documents/Codex/onchain-risk-scanner
+git clone https://github.com/ianalloway/onchain-risk-scanner.git
+cd onchain-risk-scanner
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e ".[dev]"
+python3 -m pip install -e ".[dev]"
 ```
 
 ## Usage
@@ -30,6 +34,12 @@ Scan a Base contract with the default public RPC:
 
 ```bash
 onchain-risk 0x4200000000000000000000000000000000000006 --chain base
+```
+
+Build an upgrade/admin timeline:
+
+```bash
+onchain-risk timeline 0x4200000000000000000000000000000000000006 --chain base
 ```
 
 Run the grant/demo flow:
@@ -58,6 +68,7 @@ onchain-risk 0x0000000000000000000000000000000000000000 \
 ## Example Output
 
 See [examples/base-weth.md](examples/base-weth.md) for a real read-only scan of the canonical WETH-style contract on Base.
+See [reports/index.md](reports/index.md) for a public scan set across Base, Ethereum, Optimism, and Arbitrum.
 
 ```markdown
 # On-chain Risk Report: `0x...`
@@ -81,6 +92,7 @@ Delegatecall can be legitimate for proxies and libraries, but it raises the impa
 | Runtime bytecode | size and opcode profile | Large or unusual contracts need deeper review. |
 | Dangerous opcodes | `DELEGATECALL`, `SELFDESTRUCT`, `CALLCODE`, `ORIGIN` | These can create upgrade, availability, legacy, or auth risks. |
 | Privileged selectors | upgrade, owner, pause, mint, withdraw | These are not automatically bugs, but they define the human review map. |
+| Upgrade/admin timeline | `Upgraded`, `AdminChanged`, `BeaconUpgraded` events | Historical control changes help reviewers understand governance and operational risk. |
 
 ## Roadmap
 
@@ -110,7 +122,7 @@ See [docs/whitehat-playbook.md](docs/whitehat-playbook.md).
 ## Development
 
 ```bash
-python -m pytest
+python3 -m pytest
 ```
 
 ## License

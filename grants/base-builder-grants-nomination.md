@@ -46,13 +46,13 @@ https://github.com/ianalloway/onchain-risk-scanner
 
 Yes - live on Base mainnet
 
-Reason: the project is a shipped open-source tool that already performs read-only scans of Base mainnet contracts and includes a real Base scan example.
+Reason: the project is a shipped open-source scanner for Base mainnet contracts. It is not an on-chain protocol; it is developer/security tooling that reads Base mainnet data and publishes reproducible Base reports.
 
 ### Why does this project deserve a Base grant? 150 words max
 
-On-chain Risk Scanner is a live open-source security tool for Base builders and users. It performs read-only contract triage through JSON-RPC and surfaces proxy metadata, privileged selectors, and opcode-level risk signals in Markdown or JSON reports. The first public example scans a Base mainnet contract, and the roadmap focuses on Base-specific reports, verified source ingestion, upgrade/admin timelines, and bounty-safe research workflows. A Base Builder Grant would fund the next milestone: a public set of Base contract risk reports and clearer tooling for developers to understand upgrade/admin risk before integrations. The project is non-custodial, uses no private keys, sends no transactions, and is designed as public-good security infrastructure.
+On-chain Risk Scanner is shipped open-source security tooling for Base builders and users. It performs read-only contract triage through JSON-RPC and surfaces proxy metadata, privileged selectors, opcode-level risk signals, and upgrade/admin timelines in Markdown or JSON reports. The repo now includes multiple public Base scans and a roadmap for verified-source ingestion. A Base Builder Grant would fund the next milestone: a larger Base contract scan set and clearer tooling for developers to understand upgrade/admin risk before integrations. The project is non-custodial, uses no private keys, sends no transactions, and is designed as public-good security infrastructure.
 
-Word count: 116
+Word count: 100
 
 ### Please link a 1 minute demo of the project
 
